@@ -1,0 +1,126 @@
+@import "colors";
+@import "mixin";
+
+$time:0.7s;
+
+.recipes-block {
+
+    @include center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 70px;
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        max-width: 310px;
+    }
+
+    @media screen and (min-width:621) and (max-width:1300px) {
+        max-width: 620px;
+
+    }
+
+    @media (min-width:1301px) {
+        max-width: 1300px;
+
+    }
+
+}
+
+.recipe-box {
+    @include font;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 300px;
+    height: 450px;
+    background-color: $color1 ;
+    border-radius: 7px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.food-img-small {
+    align-self: flex-start;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 200px;
+    width: 240px;
+    border-radius: 5px;
+    border: 3px solid $color5;
+    
+}
+
+
+.meal-title {
+    @include font;
+    color: $color5;
+    font-size: 22px;
+    width: 240px;
+    margin-top: 10px;
+
+}
+
+.meal-info {
+    display: flex;
+    margin-left: 30px;
+    gap: 13px;
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+.meal-area {
+    text-align: center;
+    @include center;
+    height: 24px;
+    padding: 0 5px;
+    background-color: $color3;
+    border-radius: 4px;
+}
+
+.meal-area-text {
+    @include font;
+    color: $color1;
+    font-size: 18px;
+
+}
+
+
+.meal-recipe-button {
+    @include font;
+    @include center;
+    border: none;
+    font-size: 26px;
+    padding: 10px 20px;
+    height: 40px;
+    background-color: $color1;
+    color: $color5;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: 15px;
+    border: 1px solid $color5;
+    transition: all $time, background-color $time ease-out;
+
+    &:hover {
+
+        border: none;
+        background-color: $color4;
+    }
+
+}
+
+
+.meal-recipe-link {
+    
+    color: $color5;
+    cursor: pointer;
+    @include font;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all $time;
+    @include transition($time, 1.1);
+
+}

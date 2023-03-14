@@ -1,0 +1,22 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin transition($time, $scale) {
+    &:hover {
+        transition: all $time;
+        transform: scale($scale);
+        cursor: pointer;
+    }
+}
+
+@mixin font {
+    font-family: 'Montserrat Alternates';
+}

@@ -1,0 +1,117 @@
+.recipes-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 70px;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 0) and (max-width: 620px) {
+  .recipes-block {
+    max-width: 310px;
+  }
+}
+@media screen and (min-width: 621) and (max-width: 1300px) {
+  .recipes-block {
+    max-width: 620px;
+  }
+}
+@media (min-width: 1301px) {
+  .recipes-block {
+    max-width: 1300px;
+  }
+}
+
+.recipe-box {
+  font-family: "Montserrat Alternates";
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 300px;
+  height: 450px;
+  background-color: #130D1C;
+  border-radius: 7px;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
+
+.food-img-small {
+  align-self: flex-start;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 200px;
+  width: 240px;
+  border-radius: 5px;
+  border: 3px solid #FFFFFF;
+}
+
+.meal-title {
+  font-family: "Montserrat Alternates";
+  color: #FFFFFF;
+  font-size: 22px;
+  width: 240px;
+  margin-top: 10px;
+}
+
+.meal-info {
+  display: flex;
+  margin-left: 30px;
+  gap: 13px;
+  margin-top: 12px;
+  align-self: flex-start;
+}
+
+.meal-area {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 5px;
+  background-color: #DFC294;
+  border-radius: 4px;
+}
+
+.meal-area-text {
+  font-family: "Montserrat Alternates";
+  color: #130D1C;
+  font-size: 18px;
+}
+
+.meal-recipe-button {
+  font-family: "Montserrat Alternates";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 26px;
+  padding: 10px 20px;
+  height: 40px;
+  background-color: #130D1C;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 15px;
+  border: 1px solid #FFFFFF;
+  transition: all 0.7s, background-color 0.7s ease-out;
+}
+.meal-recipe-button:hover {
+  border: none;
+  background-color: #6c8da4;
+}
+
+.meal-recipe-link {
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Montserrat Alternates";
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: all 0.7s;
+}
+.meal-recipe-link:hover {
+  transition: all 0.7s;
+  transform: scale(1.1);
+  cursor: pointer;
+}/*# sourceMappingURL=recipes.css.map */

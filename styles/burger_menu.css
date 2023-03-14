@@ -1,0 +1,65 @@
+.burger-menu-block {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 220px;
+  background-color: #FFFFFF;
+  border: 2px solid #130D1C;
+  border-radius: 7px;
+  margin: 5px 5px 0 auto;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+  z-index: 8;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  top: 38px;
+  transition: all 0.7s;
+}
+
+.burger-menu-text {
+  margin: 5px 0 5px 5px;
+  font-family: "Montserrat Alternates";
+  font-size: 23px;
+  cursor: pointer;
+  color: #130D1C;
+  position: relative;
+  text-decoration: none;
+}
+
+.burger-menu-text.short_text::before {
+  width: 140px;
+}
+
+.burger-menu-text.long_text::before {
+  width: 170px;
+}
+
+.burger-menu-text::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #130D1C;
+  transform: scaleX(0);
+  transition: transform 0.6s ease;
+}
+
+.burger-menu-text:hover::before {
+  transform: scaleX(1);
+}
+
+.burger-menu-label {
+  margin: 0 17px 0 auto;
+  position: relative;
+}
+
+.burger-checkbox {
+  display: none;
+}
+.burger-checkbox:checked ~ .burger-menu-block {
+  opacity: 1;
+  pointer-events: all;
+}/*# sourceMappingURL=burger_menu.css.map */

@@ -1,0 +1,164 @@
+@import "colors";
+@import "mixin";
+
+#cooking-lab {
+    margin-top: 40px;
+    @include center;
+    flex-direction: row;
+    gap: 80px;
+
+
+
+
+}
+
+.ingr-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // border: 3px solid $color1;
+    border-radius: 15px;
+    width: 550px;
+    min-height: 400px;
+    background-color: $color5;
+    box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width:0) and (max-width:1200px) {
+        order: 1;
+
+    }
+
+    @media (min-width:1201px) {
+        order: -1;
+
+    }
+
+
+}
+
+.adding-ingr-block {
+    width: 660px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    .lower-text {
+        margin-top: auto;
+        font-size: 20px;
+        color: $color4;
+        align-self: flex-end;
+
+        @media screen and (min-width:0) and (max-width:620px) {
+            font-size: 16px;
+            ;
+
+        }
+
+    }
+
+    @media screen and (min-width:0) and (max-width:1200px) {
+        order: -1;
+
+    }
+
+    @media (min-width:1201px) {
+        order: 1;
+
+    }
+
+}
+
+.info-lab-text {
+    @include font;
+    align-self: flex-start;
+    font-size: 32px;
+    color: $color1;
+
+
+}
+
+.minus-ingr {
+    height: 24px;
+    position: absolute;
+    left: 15px;
+    transition: all 0.7s;
+    @include transition(0.7s, 1.09);
+
+}
+
+.ing-text {
+    @include center;
+    @include font;
+    color: $color5;
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid $color5;
+    border-radius: 15px;
+    padding: 9px 0;
+    background-color: rgba($color4, 0.6);
+    position: relative;
+
+
+}
+
+.plus-ingr {
+    opacity: 0.7;
+    height: 27px;
+}
+
+.find-ingr {
+    width: 450px;
+    height: 45px;
+    font-size: 24px;
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        width: 250px;
+    }
+
+    @media (min-width:621px) {
+        width: 450px;
+    }
+
+
+}
+
+.search-ingr {
+    margin-top: 40px;
+
+
+}
+
+.find-recipe-btn {
+    @include font;
+    text-align: center;
+    background-color: $color1;
+    color: $color5;
+    font-size: 26px;
+    width: 250px;
+    height: 60px;
+    align-self: flex-end;
+    margin: auto;
+    margin-top: 100px;
+    user-select: none;
+    transition: all 0.7s;
+    border-radius: 10px;
+    @include transition(0.7s, 1.1);
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        margin-top: 50px;
+        margin-bottom:5px;
+        height: 70px;
+    }
+
+}
+
+.cooking-lab-icon {
+    align-self: center;
+    opacity: 0.9;
+    height: 70px;
+    margin-right: -15px;
+}
+
+#cooking-lab-ideas-title {
+    margin-top: 30px;
+}

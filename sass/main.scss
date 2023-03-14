@@ -1,0 +1,71 @@
+@import "colors";
+@import "mixin";
+
+
+body {
+    min-height: 100vh;
+}
+
+body,
+*,
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+.main-background {
+    background-position: 100% 100%;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    left: 0;
+    z-index: -5;
+    background-color: $color1;
+}
+
+.main-footer {
+    @include center;
+    flex-direction: column;
+    background-color: $color4;
+    color: $color5;
+    height: 50px;
+    bottom: 0;
+    position: relative;
+
+}
+
+.main-footer-text {
+    @include font;
+
+}
+
+.main-footer-rights {
+    @include font;
+    color: $color5;
+}
+
+.main-page-numeration {
+    @include center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.arrow-numeration {
+    height: 35px;
+    cursor: pointer;
+}
+
+.main-page-num {
+    @include font;
+    font-size: 50px;
+    font-weight: 700;
+    color: $color1;
+}

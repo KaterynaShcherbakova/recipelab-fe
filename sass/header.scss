@@ -1,0 +1,206 @@
+@import "colors";
+@import "mixin";
+
+$time:0.6s;
+body,
+*,
+div,
+p {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-header-block {
+    @include center;
+    width: 100%;
+    top: 0;
+    background-color: $color1;
+    height: 58px;
+    left: 0;
+}
+
+.lower-header-block {
+    z-index: 10;
+    @include vertical-center;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: $color4;
+    height: 38px;
+    left: 0;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.main-header-logo {
+    height: 46px;
+    margin-left: 10px;
+}
+
+.lower-header-burger-icon {
+    height: 31px;
+    transition: transform $time;
+    @include transition($time, 1.07);
+    position:relative;
+}
+
+
+.lower-header-scrollbar-block {
+    @include vertical-center;
+    height: 38px;
+    gap: 35px;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    @media screen and (min-width:0) and (max-width:319px) {
+        display: none;
+
+    }
+
+    @media (min-width:320px) {
+        width: 80%;
+        overflow-x: scroll;
+        padding-left: 10px;
+    }
+
+
+}
+
+.lower-header-scrollbar-text {
+    transition: transform $time;
+    color: $color5;
+    font-size: 20px;
+    @include font;
+    @include transition($time, 1.07);
+
+}
+
+
+
+.search-input {
+    font-size: 20px;
+    @include font;
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 1px solid $color4;
+    letter-spacing: 1px;
+    outline: none;
+    z-index: 2;
+    transition: all 1s;
+
+    cursor: pointer;
+
+    &:focus {
+        border-color: transparent;
+        transition: all 1s;
+    }
+
+    &::placeholder {
+        padding-left: 3px;
+        color: $color4;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+
+    }
+
+    &::selection {
+        background: $color1;
+    }
+
+    &::-moz-selection {
+        background: $color1;
+
+    }
+
+    &:focus~.border {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+.textbox {
+    padding: 2px;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+.border {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background: $color1;
+    z-index: -1;
+    transition: height 0.3s, width 0.3s 0.1s;
+}
+
+
+.search-icon {
+    user-select: none;
+    height: 30px;
+    transition: transform $time;
+    @include transition($time, 1.07);
+}
+
+
+.additional-header-block {
+    margin: auto;
+    margin-top: 20px;
+
+    @media screen and (min-width:0) and (max-width:325px) {
+
+        display: flex;
+        max-width: 95%;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 15px;
+    }
+
+    @media (min-width:326px) {
+        @include vertical-center;
+        max-width: 95%;
+        justify-content: space-between;
+    }
+
+
+}
+
+.search-div {
+    @include vertical-center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.filter-icon {
+    transition: transform $time;
+    user-select: none;
+    height: 34px;
+
+    @include transition($time, 1.07);
+
+    @media screen and (min-width:0) and (max-width:325px) {
+        margin-right: -3px;
+
+    }
+}
+
+

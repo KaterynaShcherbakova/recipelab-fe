@@ -1,0 +1,157 @@
+#cooking-lab {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.ingr-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 15px;
+  width: 550px;
+  min-height: 400px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 0) and (max-width: 1200px) {
+  .ingr-block {
+    order: 1;
+  }
+}
+@media (min-width: 1201px) {
+  .ingr-block {
+    order: -1;
+  }
+}
+
+.adding-ingr-block {
+  width: 660px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.adding-ingr-block .lower-text {
+  margin-top: auto;
+  font-size: 20px;
+  color: #6c8da4;
+  align-self: flex-end;
+}
+@media screen and (min-width: 0) and (max-width: 620px) {
+  .adding-ingr-block .lower-text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 1200px) {
+  .adding-ingr-block {
+    order: -1;
+  }
+}
+@media (min-width: 1201px) {
+  .adding-ingr-block {
+    order: 1;
+  }
+}
+
+.info-lab-text {
+  font-family: "Montserrat Alternates";
+  align-self: flex-start;
+  font-size: 32px;
+  color: #130D1C;
+}
+
+.minus-ingr {
+  height: 24px;
+  position: absolute;
+  left: 15px;
+  transition: all 0.7s;
+}
+.minus-ingr:hover {
+  transition: all 0.7s;
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+.ing-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat Alternates";
+  color: #FFFFFF;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid #FFFFFF;
+  border-radius: 15px;
+  padding: 9px 0;
+  background-color: rgba(108, 141, 164, 0.6);
+  position: relative;
+}
+
+.plus-ingr {
+  opacity: 0.7;
+  height: 27px;
+}
+
+.find-ingr {
+  width: 450px;
+  height: 45px;
+  font-size: 24px;
+}
+@media screen and (min-width: 0) and (max-width: 620px) {
+  .find-ingr {
+    width: 250px;
+  }
+}
+@media (min-width: 621px) {
+  .find-ingr {
+    width: 450px;
+  }
+}
+
+.search-ingr {
+  margin-top: 40px;
+}
+
+.find-recipe-btn {
+  font-family: "Montserrat Alternates";
+  text-align: center;
+  background-color: #130D1C;
+  color: #FFFFFF;
+  font-size: 26px;
+  width: 250px;
+  height: 60px;
+  align-self: flex-end;
+  margin: auto;
+  margin-top: 100px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.7s;
+  border-radius: 10px;
+}
+.find-recipe-btn:hover {
+  transition: all 0.7s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+@media screen and (min-width: 0) and (max-width: 620px) {
+  .find-recipe-btn {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    height: 70px;
+  }
+}
+
+.cooking-lab-icon {
+  align-self: center;
+  opacity: 0.9;
+  height: 70px;
+  margin-right: -15px;
+}
+
+#cooking-lab-ideas-title {
+  margin-top: 30px;
+}/*# sourceMappingURL=cooking_lab.css.map */

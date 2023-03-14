@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/create_recipe.css">
+    <link rel="stylesheet" href="styles/burger_menu.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/recipes.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create recipe</title>
+</head>
+
+<body>
+    <div class="main-header-block">
+        <img class="main-header-logo" src="img/white_logo.png" />
+    </div>
+    <div class="lower-header-block">
+        <div class="lower-header-scrollbar-block">
+            <div class="lower-header-scrollbar-text">Pasta</div>
+            <div class="lower-header-scrollbar-text">Seafood</div>
+            <div class="lower-header-scrollbar-text">Vegetarian</div>
+            <div class="lower-header-scrollbar-text">Vegan</div>
+            <div class="lower-header-scrollbar-text">Breakfast</div>
+            <div class="lower-header-scrollbar-text">Dessert</div>
+            <div class="lower-header-scrollbar-text">Side</div>
+            <div class="lower-header-scrollbar-text">Starter</div>
+        </div>
+         <label class="burger-menu-label">
+            <input type="checkbox" class="burger-checkbox">
+            <div class="burger-menu-block">
+                <a href="index.html" class="burger-menu-text short_text">All recipes</a>
+                <a href="create_recipe.html" class="burger-menu-text long_text">Create recipe</a>
+                <a href="cooking_lab.html" class="burger-menu-text short_text">Cooking lab</a>
+                <a href="meal_generation.html" class="burger-menu-text long_text">What to cook?</a>
+            </div>
+            <img class="lower-header-burger-icon" src="img/burger_menu_icon.png" />
+        </label>
+
+    </div>
+   
+    <div class="recipes-block" id="create-recipe">
+        <div class="create-recipe-info-block">
+            <p class="create-recipe-title">How to publish your own recipe?</p>
+            <div class="recipe-instruct-block">
+                <p class="instruct-sentence">
+                    1. Create a new recipe.
+                </p>
+                <p class="instruct-sentence">
+                    2. Prepare info about meal you wanna publish. It should be ingredients, measurements, final photo
+                    and optional link on Youtube.
+                </p>
+                <p class="instruct-sentence">
+                    3. Fill in form.
+                </p>
+                <p class="instruct-sentence">
+                    4. Wait for feedback. 
+                </p>
+
+            </div>
+        </div>
+
+        <div class="create-recipe-form-block">
+            <form class="recipe-instruct-form">
+                <label>
+                    <p class="recipe-form-label">Meal's title:</p>
+                    <input class="recipe-form-input" type="text" placeholder="Caesar salad">
+                </label>
+                <label>
+                    <p class="recipe-form-label">Category:</p>
+                    <select class="recipe-form-input" defaultValue="" >
+                        
+                        <option selected hidden disabled value="">Select</option>
+                        <option value="pasta">Pasta</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="side">Side</option>
+                        <option value="starter">Starter</option>
+                        <option value="other">Other</option>
+
+                    </select>
+                </label>
+                <label>
+                    <p class="recipe-form-label">Recipe file:</p>
+                    <input class="custom-file-input"type="file" accept=".txt, .docx, .doc, .pdf">
+                </label> 
+                <label>
+                    <p class="recipe-form-label">Final photo:</p>
+                    <input class="custom-file-input" type="file" accept="image/*">
+                </label>
+                <label>
+                    <p class="recipe-form-label">Link on Youtube:</p>
+                    <input class="recipe-form-input" type="url" placeholder="https://example.com" pattern="https://.*">
+                </label>
+                <div class="create-recipe-btn-block">
+                    <button class="create-recipe-button">Cancel</button>
+                    <button class="create-recipe-button">Send</button>
+
+                </div>
+            </form>
+            <img class="create-recipe-bg-icon" src="img/meal.png" />
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p class="main-footer-rights">Copyright © 2023 RecipesLab. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

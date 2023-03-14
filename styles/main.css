@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+}
+
+body,
+*,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-background {
+  background-position: 100% 100%;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  left: 0;
+  z-index: -5;
+  background-color: #130D1C;
+}
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #6c8da4;
+  color: #FFFFFF;
+  height: 50px;
+  bottom: 0;
+  position: relative;
+}
+
+.main-footer-text {
+  font-family: "Montserrat Alternates";
+}
+
+.main-footer-rights {
+  font-family: "Montserrat Alternates";
+  color: #FFFFFF;
+}
+
+.main-page-numeration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.arrow-numeration {
+  height: 35px;
+  cursor: pointer;
+}
+
+.main-page-num {
+  font-family: "Montserrat Alternates";
+  font-size: 50px;
+  font-weight: 700;
+  color: #130D1C;
+}/*# sourceMappingURL=main.css.map */
