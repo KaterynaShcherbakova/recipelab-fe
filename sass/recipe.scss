@@ -2,10 +2,14 @@
 @import "mixin";
 
 #recipe-main-title {
+    display: flex;
+    align-items: center;
     font-size: 43px;
     text-shadow: none;
     margin-bottom: -30px;
     color: $color2;
+
+   
 }
 
 .recipe-img {
@@ -13,12 +17,13 @@
     height: 400px;
     border-radius: 10px;
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
+
     @media screen and (min-width:0) and (max-width:620px) {
-        height:300px;
-        width:300px;
+        height: 300px;
+        width: 300px;
     }
 
-      
+
 }
 
 .recipe-subtitle {
@@ -63,10 +68,11 @@
 
     .ingr-title {
         font-size: 23px;
-        
+
     }
-    .ingr-measure{
-    align-self:flex-end;
+
+    .ingr-measure {
+        align-self: flex-end;
     }
 }
 
@@ -82,61 +88,70 @@
     font-size: 40px;
     color: $color2;
     align-self: center;
-    margin-top:20px;
+    margin-top: 20px;
 
 }
 
-.recipe-instruction{
+.recipe-instruction {
     @include font;
-    font-size:18px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
 }
 
-.br-recipe-step{
-    font-weight: 700;;
-}
-
-a{
-    color:$color1;
-}
-.recipe-link{
-    font-size:27px;
+.br-recipe-step {
     font-weight: 700;
-    color:$color2;
-   
+    ;
 }
 
-.recipe-video{
+a {
+    color: $color1;
+}
+
+.recipe-link {
+    font-size: 27px;
+    font-weight: 700;
+    color: $color2;
+
+}
+
+.recipe-video {
     align-self: center;
-    width:700px;
-    height:450px;
-    margin-bottom:20px;
+    width: 700px;
+    height: 450px;
+    margin-bottom: 20px;
+
     @media screen and (min-width:0) and (max-width:500px) {
-        height:200px;
-        width:300px;
+        height: 200px;
+        width: 300px;
     }
+
     @media screen and (min-width:501px) and (max-width:750px) {
-        height:300px;
-        width:450px;
+        height: 300px;
+        width: 450px;
     }
 }
 
-#recipe-area{
+#recipe-area {
     background-color: $color2;
-    padding:5px 30px;
-margin-bottom:10px;
-    
+    padding: 5px 30px;
+    margin-bottom: 10px;
+
 }
 
-#recipe-area-text{
-    color:$color5;
+#recipe-area-text {
+    color: $color5;
 }
 
-.go-back-icon{
+.go-back-icon {
     opacity: 0.9;
     height: 32px;
     margin-right: 20px;
+    transition: all 0.7s;
+    @include transition(0.7s, 1.1);
+    @media screen and (min-width:0) and (max-width:321px) {
+      align-self:flex-start !important;
+      margin-top:10px;
+    }
 }
-

@@ -66,4 +66,96 @@ body::-webkit-scrollbar {
   font-size: 50px;
   font-weight: 700;
   color: #130D1C;
+}
+
+.filter-overdiv {
+  display: flex;
+}
+
+.filter-block {
+  position: absolute;
+  margin-left: -20px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #130D1C;
+  border: 2px solid #130D1C;
+  box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+@media screen and (min-width: 0) and (max-width: 325px) {
+  .filter-block {
+    left: 20px;
+  }
+}
+
+#select-filter-area {
+  margin: 10px 30px 20px;
+  font-size: 16px;
+  transition: all 0.7s;
+}
+
+.search-option-block {
+  z-index: 5;
+  display: flex;
+  margin: 5px 5px;
+  flex-direction: column;
+  width: 250px;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  transition: all 0.7s;
+}
+
+.option-img {
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+}
+
+.search-option-text {
+  font-family: "Montserrat Alternates";
+  font-size: 19px;
+}
+
+.search-option-item {
+  display: flex;
+  padding: 10px 10px;
+  gap: 5px;
+  border-radius: 5px;
+  transition: all 0.7s;
+}
+.search-option-item:hover {
+  background-color: #6c8da4;
+  color: #FFFFFF;
+  transition: all 0.7s;
+}
+
+.filter-btn-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: -5px 0 10px;
+}
+
+.filter-btn {
+  border-radius: 5px;
+  border: none;
+  background-color: #6c8da4;
+  color: #FFFFFF;
+  font-family: "Montserrat Alternates";
+  font-size: 15px;
+  padding: 4px 15px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.filter-btn:hover {
+  transition: all 0.7s;
+  transform: scale(1.09);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
