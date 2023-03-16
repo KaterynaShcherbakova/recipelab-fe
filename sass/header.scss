@@ -1,7 +1,8 @@
 @import "colors";
 @import "mixin";
 
-$time:0.6s;
+$time: 0.6s;
+
 body,
 *,
 div,
@@ -42,7 +43,7 @@ p {
     height: 31px;
     transition: transform $time;
     @include transition($time, 1.07);
-    position:relative;
+    position: relative;
 }
 
 
@@ -85,6 +86,7 @@ p {
 .search-input {
     font-size: 20px;
     @include font;
+    background-color: $color5;
     height: 35px;
     width: 250px;
     border-radius: 5px;
@@ -94,12 +96,16 @@ p {
     outline: none;
     z-index: 2;
     transition: all 1s;
-
+    position: relative;
     cursor: pointer;
 
     &:focus {
         border-color: transparent;
         transition: all 1s;
+        // ~.search-option-block {
+        //     opacity: 1;
+        //     pointer-events: all;
+        // }
     }
 
     &::placeholder {
@@ -126,6 +132,8 @@ p {
         height: 100%;
     }
 
+ 
+
 }
 
 
@@ -135,6 +143,8 @@ p {
     z-index: 1;
     border-radius: 6px;
     overflow: hidden;
+
+   
 }
 
 
@@ -194,13 +204,12 @@ p {
     transition: transform $time;
     user-select: none;
     height: 34px;
-
+    position: relative;
     @include transition($time, 1.07);
 
     @media screen and (min-width:0) and (max-width:325px) {
         margin-right: -3px;
+        order: 1;
 
     }
 }
-
-

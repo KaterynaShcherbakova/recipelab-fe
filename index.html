@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkbox.css">
+    <link rel="stylesheet" href="styles/create_recipe.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/recipes.css">
     <link rel="stylesheet" href="styles/burger_menu.css">
@@ -15,7 +17,9 @@
 
 <body>
     <div class="main-header-block">
-        <img class="main-header-logo" src="img/white_logo.png" />
+        <a href="index.html">
+            <img class="main-header-logo" src="img/white_logo.png" />
+        </a>
     </div>
     <div class="lower-header-block">
         <div class="lower-header-scrollbar-block">
@@ -31,6 +35,7 @@
         <label class="burger-menu-label">
             <input type="checkbox" class="burger-checkbox">
             <div class="burger-menu-block">
+
                 <a href="index.html" class="burger-menu-text short_text">All recipes</a>
                 <a href="create_recipe.html" class="burger-menu-text long_text">Create recipe</a>
                 <a href="cooking_lab.html" class="burger-menu-text short_text">Cooking lab</a>
@@ -41,16 +46,69 @@
     </div>
 
     <div class="additional-header-block">
-        <img src="img/filter.png" alt="" class="filter-icon">
-        <!-- <div class="filter-block">
+        <div class="filter-overdiv">
+            <img src="img/filter.png" alt="" class="filter-icon">
+            <div class="filter-block">
+                <div className='checkbox-wrapper-48'>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox-wrapper-input" />
+                        <p class="checkbox-text">Latest</p>
+                    </label>
 
-        </div> -->
+                </div>
+                <div className='checkbox-wrapper-48'>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox-wrapper-input" />
+                        <p class="checkbox-text">By area</p>
+
+                    </label>
+                    <select class="recipe-form-input" id="select-filter-area" defaultValue="">
+
+                        <option selected hidden disabled value="">Select</option>
+                        <option value="american">American</option>
+                        <option value="british">British</option>
+                        <option value="canadian">Canadian</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="croatian">Croatian</option>
+                        <option value="dutch">Dutch</option>
+                        <option value="egyptian">Egyptian</option>
+                        <option value="french">French</option>
+                        <option value="greek">Greek</option>
+                        <option value="indian">Indian</option>
+                        <option value="irish">Irish</option>
+                        <option value="italian">Italian</option>
+                        <option value="jamaican">Jamaican</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="polish">Polish</option>
+                    </select>
+                    <div class="filter-btn-block">
+                        <button class="filter-btn">Cancel</button>
+                        <button class="filter-btn">Apply</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <div class="search-div">
 
-            <div class="textbox">
-                <input placeholder="Search" type="text" class="search-input">
-                <div class="border"></div>
+            <div class="search-full-block">
+                <div class="textbox">
+                    <input placeholder="Search" type="text" class="search-input">
+                    <div class="border"></div>
+                </div>
+                <div class="search-option-block">
+                    <div class="search-option-item">
+                        <img src="img/pasta.jpg" alt="" class="option-img">
+                        <p class="search-option-text">Spaghetti alla Carbonara</p>
+                    </div>
+                    <div class="search-option-item">
+                        <img src="img/pasta.jpg" alt="" class="option-img">
+                        <p class="search-option-text">Spaghetti alla Carbonara</p>
+                    </div>
+
+                </div>
             </div>
             <img src="img/search.png" alt="" class="search-icon">
 

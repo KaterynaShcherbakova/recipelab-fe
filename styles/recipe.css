@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 #recipe-main-title {
+  display: flex;
+  align-items: center;
   font-size: 43px;
   text-shadow: none;
   margin-bottom: -30px;
@@ -132,4 +134,16 @@ a {
   opacity: 0.9;
   height: 32px;
   margin-right: 20px;
+  transition: all 0.7s;
+}
+.go-back-icon:hover {
+  transition: all 0.7s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+@media screen and (min-width: 0) and (max-width: 321px) {
+  .go-back-icon {
+    align-self: flex-start !important;
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=recipe.css.map */
