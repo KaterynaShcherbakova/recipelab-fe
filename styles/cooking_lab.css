@@ -8,6 +8,12 @@
   gap: 80px;
 }
 
+#cooking-lab-title-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .ingr-block {
   display: flex;
   flex-direction: column;
@@ -147,7 +153,8 @@
 }
 
 .cooking-lab-icon {
-  align-self: center;
+  align-self: flex-start;
+  margin-top: 5px;
   opacity: 0.9;
   height: 70px;
   margin-right: -15px;

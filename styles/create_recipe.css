@@ -20,6 +20,11 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
 }
+@media screen and (min-width: 0) and (max-width: 600px) {
+  .recipe-instruct-block {
+    height: 380px;
+  }
+}
 
 .recipe-instruct-form {
   height: 550px;

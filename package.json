@@ -1,0 +1,26 @@
+{
+  "name": "recipes_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "lint-fix": "eslint **/*.js --fix --ignore-pattern node_modules/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaterynaShcherbakova/recipelab-fe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaterynaShcherbakova/recipelab-fe/issues"
+  },
+  "homepage": "https://github.com/KaterynaShcherbakova/recipelab-fe#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
