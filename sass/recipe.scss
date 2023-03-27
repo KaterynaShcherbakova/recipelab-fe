@@ -1,6 +1,18 @@
 @import "colors";
 @import "mixin";
 
+
+#full-recipe-page{
+    display: flex;
+    flex-direction: column;
+    min-height:calc(100vh - 96px);
+
+}
+
+.recipe-page-loader{
+    flex-grow:1;
+    @include center;
+}
 #recipe-main-title {
     display: flex;
     align-items: center;
@@ -8,8 +20,13 @@
     text-shadow: none;
     margin-bottom: -30px;
     color: $color2;
+    display: none;
 
-   
+}
+
+#recipe-page {
+    display: none;
+    gap:60px;
 }
 
 .recipe-img {
@@ -79,7 +96,7 @@
 #recipe-instruct-block {
     margin-top: -50px;
     max-width: 1100px;
-
+    display: none;
 }
 
 .recipe-instruct-title {
@@ -133,15 +150,21 @@ a {
     }
 }
 
-#recipe-area {
+#recipe-area,
+#recipe-category {
     background-color: $color2;
     padding: 5px 30px;
     margin-bottom: 10px;
 
 }
 
-#recipe-area-text {
+#recipe-area-text,
+#recipe-category-text {
     color: $color5;
+}
+
+#full-recipe-ingr-block {
+    height: unset;
 }
 
 .go-back-icon {
@@ -150,8 +173,14 @@ a {
     margin-right: 20px;
     transition: all 0.7s;
     @include transition(0.7s, 1.1);
+
     @media screen and (min-width:0) and (max-width:321px) {
-      align-self:flex-start !important;
-      margin-top:10px;
+        align-self: flex-start !important;
+        margin-top: 10px;
     }
 }
+
+.recipe-title-text{
+    font-size:56px;
+}
+

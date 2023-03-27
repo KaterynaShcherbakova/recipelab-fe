@@ -1,7 +1,7 @@
 @import "colors";
 @import "mixin";
 
-$time:0.8s;
+$time: 0.8s;
 
 #create-recipe {
     gap: 60px;
@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
     background-color: rgba(74, 43, 45, 1);
     border-radius: 10px;
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+
     @media screen and (min-width:0) and (max-width:600px) {
         height: 380px;
     }
@@ -101,6 +102,10 @@ body::-webkit-scrollbar {
     padding-left: 5px;
     transition: transform $time;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     &:focus {
         transform: scale(1.05);
         transition: transform $time;
@@ -109,8 +114,9 @@ body::-webkit-scrollbar {
     &:focus::placeholder {
         color: transparent;
     }
+
     @media screen and (min-width:0) and (max-width:620px) {
-        max-width:210px;
+        max-width: 210px;
     }
 
 
@@ -141,11 +147,12 @@ input[type=file] {
     vertical-align: middle;
 
     @include font;
+
     @media screen and (min-width:0) and (max-width:620px) {
-        max-width:200px;
+        max-width: 200px;
     }
 
-   
+
 
     &::file-selector-button {
 
@@ -180,11 +187,12 @@ input[type=file] {
     margin: 35px auto;
     display: flex;
     gap: 35px;
-    
+
 
 }
 
 .create-recipe-button {
+    all: unset;
     height: 32px;
     width: 140px;
     border-radius: 5px;
@@ -194,12 +202,34 @@ input[type=file] {
     background-color: $color5;
     font-weight: 700;
     color: $color2;
-    border-color: $color2;
+    border: 2px solid $color2;
+    @include center;
     transition: all $time;
-    @include transition($time, 1.08);
+
     @media screen and (min-width:0) and (max-width:620px) {
-        max-width:100px;
+        max-width: 100px;
     }
+
+    opacity:0.5;
+
 
 }
 
+.valid-btn {
+    opacity: 1;
+
+    background-color: $color2;
+    color: $color5;
+    border-color: transparent;
+    @include transition($time, 1.08);
+
+}
+
+.required:after {
+    content: " *";
+    color: red;
+    font-weight: 400;
+    font-size:16px;
+    vertical-align: top;
+    padding-top:5px;
+}

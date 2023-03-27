@@ -20,17 +20,7 @@
         </a>
     </div>
     <div class="lower-header-block">
-        <div class="lower-header-scrollbar-block">
-            <div class="lower-header-scrollbar-text">Pasta</div>
-            <div class="lower-header-scrollbar-text">Seafood</div>
-            <div class="lower-header-scrollbar-text">Vegetarian</div>
-            <div class="lower-header-scrollbar-text">Vegan</div>
-            <div class="lower-header-scrollbar-text">Breakfast</div>
-            <div class="lower-header-scrollbar-text">Dessert</div>
-            <div class="lower-header-scrollbar-text">Side</div>
-            <div class="lower-header-scrollbar-text">Starter</div>
-        </div>
-         <label class="burger-menu-label">
+        <label class="burger-menu-label">
             <input type="checkbox" class="burger-checkbox">
             <div class="burger-menu-block">
                 <a href="index.html" class="burger-menu-text short_text">All recipes</a>
@@ -42,7 +32,7 @@
         </label>
 
     </div>
-   
+
     <div class="recipes-block" id="create-recipe">
         <div class="create-recipe-info-block">
             <p class="create-recipe-title">How to publish your own recipe?</p>
@@ -58,7 +48,7 @@
                     3. Fill in form.
                 </p>
                 <p class="instruct-sentence">
-                    4. Wait for feedback. 
+                    4. Wait for feedback.
                 </p>
 
             </div>
@@ -66,14 +56,14 @@
 
         <div class="create-recipe-form-block">
             <form class="recipe-instruct-form">
-                <label>
-                    <p class="recipe-form-label">Meal's title:</p>
-                    <input class="recipe-form-input" type="text" placeholder="Caesar salad">
+                <label >
+                    <p class="recipe-form-label required">Meal's title</p>
+                    <input id='title'class="recipe-form-input" type="text" placeholder="Caesar salad">
                 </label>
                 <label>
-                    <p class="recipe-form-label">Category:</p>
-                    <select class="recipe-form-input" defaultValue="" >
-                        
+                    <p class="recipe-form-label required">Category</p>
+                    <select id='category' class="recipe-form-input" defaultValue="">
+
                         <option selected hidden disabled value="">Select</option>
                         <option value="pasta">Pasta</option>
                         <option value="seafood">Seafood</option>
@@ -88,20 +78,20 @@
                     </select>
                 </label>
                 <label>
-                    <p class="recipe-form-label">Recipe file:</p>
-                    <input class="custom-file-input"type="file" accept=".txt, .docx, .doc, .pdf">
-                </label> 
+                    <p class="recipe-form-label required">Recipe file</p>
+                    <input id='recipe' class="custom-file-input" type="file" accept=".txt, .docx, .doc, .pdf">
+                </label>
                 <label>
-                    <p class="recipe-form-label">Final photo:</p>
-                    <input class="custom-file-input" type="file" accept="image/*">
+                    <p class="recipe-form-label required">Final photo</p>
+                    <input id='photo' class="custom-file-input" type="file" accept="image/*">
                 </label>
                 <label>
                     <p class="recipe-form-label">Link on Youtube:</p>
-                    <input class="recipe-form-input" type="url" placeholder="https://example.com" pattern="https://.*">
+                    <input id='link' class="recipe-form-input" type="url" placeholder="https://example.com" pattern="https://.*">
                 </label>
                 <div class="create-recipe-btn-block">
-                    <button class="create-recipe-button">Cancel</button>
-                    <button class="create-recipe-button">Send</button>
+                    <button class="create-recipe-button valid-btn" id="cancel-button">Cancel</button>
+                    <button class="create-recipe-button" id="send-button" type="submit">Send</button>
 
                 </div>
             </form>
@@ -112,6 +102,10 @@
     <footer class="main-footer">
         <p class="main-footer-rights">Copyright © 2023 RecipesLab. All rights reserved.</p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./js/form.js" type="module"></script>
+
+   
 </body>
 
 </html>

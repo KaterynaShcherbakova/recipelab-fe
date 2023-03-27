@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/recipes.css">
     <link rel="stylesheet" href="styles/burger_menu.css">
+    <link rel="stylesheet" href="styles/loader.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,22 +16,22 @@
     <title>RecipesLab</title>
 </head>
 
-<body>
+<body class="preload">
     <div class="main-header-block">
         <a href="index.html">
             <img class="main-header-logo" src="img/white_logo.png" />
         </a>
     </div>
     <div class="lower-header-block">
-        <div class="lower-header-scrollbar-block">
-            <div class="lower-header-scrollbar-text">Pasta</div>
-            <div class="lower-header-scrollbar-text">Seafood</div>
-            <div class="lower-header-scrollbar-text">Vegetarian</div>
-            <div class="lower-header-scrollbar-text">Vegan</div>
-            <div class="lower-header-scrollbar-text">Breakfast</div>
-            <div class="lower-header-scrollbar-text">Dessert</div>
-            <div class="lower-header-scrollbar-text">Side</div>
-            <div class="lower-header-scrollbar-text">Starter</div>
+        <div class="lower-header-scrollbar-block" id="category-list">
+            <div class="lower-header-scrollbar-text chosen-category" category="Pasta">Pasta</div>
+            <div class="lower-header-scrollbar-text" category="Seafood">Seafood</div>
+            <div class="lower-header-scrollbar-text" category="Vegetarian">Vegetarian</div>
+            <div class="lower-header-scrollbar-text" category="Vegan">Vegan</div>
+            <div class="lower-header-scrollbar-text" category="Breakfast">Breakfast</div>
+            <div class="lower-header-scrollbar-text" category="Dessert">Dessert</div>
+            <div class="lower-header-scrollbar-text" category="Side">Side</div>
+            <div class="lower-header-scrollbar-text" category="Starter">Starter</div>
         </div>
         <label class="burger-menu-label">
             <input type="checkbox" class="burger-checkbox">
@@ -51,39 +52,23 @@
             <div class="filter-block">
                 <div className='checkbox-wrapper-48'>
                     <label class="checkbox-label">
-                        <input type="checkbox" class="checkbox-wrapper-input" />
+                        <input id="latest-checkbox" type="checkbox" class="checkbox-wrapper-input" />
                         <p class="checkbox-text">Latest</p>
                     </label>
 
                 </div>
                 <div className='checkbox-wrapper-48'>
                     <label class="checkbox-label">
-                        <input type="checkbox" class="checkbox-wrapper-input" />
+                        <input id="area-checkbox" type="checkbox" class="checkbox-wrapper-input" />
                         <p class="checkbox-text">By area</p>
 
                     </label>
-                    <select class="recipe-form-input" id="select-filter-area" defaultValue="">
-
+                    <select class="recipe-form-input area-selector" id="select-filter-area" defaultValue="">
                         <option selected hidden disabled value="">Select</option>
-                        <option value="american">American</option>
-                        <option value="british">British</option>
-                        <option value="canadian">Canadian</option>
-                        <option value="chinese">Chinese</option>
-                        <option value="croatian">Croatian</option>
-                        <option value="dutch">Dutch</option>
-                        <option value="egyptian">Egyptian</option>
-                        <option value="french">French</option>
-                        <option value="greek">Greek</option>
-                        <option value="indian">Indian</option>
-                        <option value="irish">Irish</option>
-                        <option value="italian">Italian</option>
-                        <option value="jamaican">Jamaican</option>
-                        <option value="japanese">Japanese</option>
-                        <option value="polish">Polish</option>
                     </select>
                     <div class="filter-btn-block">
-                        <button class="filter-btn">Cancel</button>
-                        <button class="filter-btn">Apply</button>
+                        <button class="filter-btn" id="cancel-btn">Cancel</button>
+                        <button class="filter-btn" id="apply-btn">Apply</button>
 
                     </div>
 
@@ -99,313 +84,32 @@
                     <div class="border"></div>
                 </div>
                 <div class="search-option-block">
-                    <div class="search-option-item">
-                        <img src="img/pasta.jpg" alt="" class="option-img">
-                        <p class="search-option-text">Spaghetti alla Carbonara</p>
-                    </div>
-                    <div class="search-option-item">
-                        <img src="img/pasta.jpg" alt="" class="option-img">
-                        <p class="search-option-text">Spaghetti alla Carbonara</p>
-                    </div>
 
                 </div>
             </div>
-            <img src="img/search.png" alt="" class="search-icon">
+            <img src="img/search.png" alt="" id="search-icon" class="search-icon">
 
 
         </div>
     </div>
-
-    <div class="recipes-block">
-        <div class="recipe-box">
-            <img src="img/pasta.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Spaghetti alla Carbonara</div>
-            <div class="meal-info">
-                <div class="meal-area ">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Pasta
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-            <a href="https:\/\/www.youtube.com\/watch?v=_T6jkRvhlkk" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/pizza.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Pizza Express Margherita</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Miscellaneous
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https://www.youtube.com/watch?v=vcfNpDtVqOw&ab_channel=GordonRamsay" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/bolognese.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Spaghetti Bolognese</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Beef
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=-gF8d-fitkU" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/pudding.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Sticky Toffee Pudding</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        British
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Dessert
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=hKq6RbxJHBo" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/salmon.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Salmon Prawn Risotto</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Seafood
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=V2PMvBv52IE" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/summer_pudding.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Summer Pudding</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        British
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Dessert
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=akJIO6UhXtA" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/pistou.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Summer Pistou</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        French
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Vegetarian
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=fyeqZJKEXp0" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
+    <div class="main-meals-block">
+        <div class="recipes-block" id="main-meals">
+            <span class="loader"></span>
         </div>
 
-        <div class="recipe-box">
-            <img src="img/pie.jpg" alt="" class="food-img-small">
+        <div class="main-page-numeration">
+            <img src="img/previous.png" alt="" id="prev-page" class="arrow-numeration">
+            <p class="main-page-num">1</p>
+            <img src="img/next.png" alt="" id="next-page" class="arrow-numeration">
 
-            <div class="meal-title">Sugar Pie</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Canadian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Dessert
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=uVQ66jiL-Dc" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
         </div>
-        <div class="recipe-box">
-            <img src="img/pasta.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Spaghetti alla Carbonara</div>
-            <div class="meal-info">
-                <div class="meal-area ">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Pasta
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-            <a href="https:\/\/www.youtube.com\/watch?v=_T6jkRvhlkk" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/pizza.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Pizza Express Margherita</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Miscellaneous
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https://www.youtube.com/watch?v=vcfNpDtVqOw&ab_channel=GordonRamsay" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/bolognese.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Spaghetti Bolognese</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Beef
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=-gF8d-fitkU" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-        <div class="recipe-box">
-            <img src="img/bolognese.jpg" alt="" class="food-img-small">
-
-            <div class="meal-title">Spaghetti Bolognese</div>
-            <div class="meal-info">
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Italian
-                    </div>
-                </div>
-                <div class="meal-area">
-                    <div class="meal-area-text">
-                        Beef
-                    </div>
-                </div>
-
-            </div>
-            <button class="meal-recipe-button btn-animation">Detailed recipe</button>
-
-            <a href="https:\/\/www.youtube.com\/watch?v=-gF8d-fitkU" class="meal-recipe-link">
-                Watch on Youtube
-            </a>
-        </div>
-
+        <footer class="main-footer">
+            <p class="main-footer-rights">Copyright © 2023 RecipesLab. All rights reserved.</p>
+        </footer>
     </div>
-
-    <div class="main-page-numeration">
-        <img src="img/previous.png" alt="" class="arrow-numeration">
-        <p class="main-page-num">2</p>
-        <img src="img/next.png" alt="" class="arrow-numeration">
-
     </div>
-    <footer class="main-footer">
-        <p class="main-footer-rights">Copyright © 2023 RecipesLab. All rights reserved.</p>
-    </footer>
-    </div>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
+
 </body>
 
 </html>

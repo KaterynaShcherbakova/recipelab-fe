@@ -75,11 +75,35 @@ p {
   color: #FFFFFF;
   font-size: 20px;
   font-family: "Montserrat Alternates";
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }
 .lower-header-scrollbar-text:hover {
   transition: all 0.6s;
   transform: scale(1.07);
   cursor: pointer;
+}
+.lower-header-scrollbar-text:after {
+  width: 0;
+  background: #FFFFFF;
+  height: 1.5px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  border-radius: 5px;
+}
+.lower-header-scrollbar-text.chosen-category:after {
+  width: 100%;
+  left: 0;
+  border-radius: 5px;
+}
+.lower-header-scrollbar-text.chosen-category:hover:after {
+  width: 100%;
+  left: 0;
+  border-radius: 5px;
 }
 
 .search-input {

@@ -88,6 +88,9 @@ body::-webkit-scrollbar {
   padding-left: 5px;
   transition: transform 0.8s;
 }
+.recipe-form-input::-webkit-scrollbar {
+  display: none;
+}
 .recipe-form-input:focus {
   transform: scale(1.05);
   transition: transform 0.8s;
@@ -162,6 +165,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 .create-recipe-button {
+  all: unset;
   height: 32px;
   width: 140px;
   border-radius: 5px;
@@ -171,16 +175,36 @@ input[type=file]::file-selector-button:hover {
   background-color: #FFFFFF;
   font-weight: 700;
   color: #4A2B2D;
-  border-color: #4A2B2D;
+  border: 2px solid #4A2B2D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.8s;
-}
-.create-recipe-button:hover {
-  transition: all 0.8s;
-  transform: scale(1.08);
-  cursor: pointer;
+  opacity: 0.5;
 }
 @media screen and (min-width: 0) and (max-width: 620px) {
   .create-recipe-button {
     max-width: 100px;
   }
+}
+
+.valid-btn {
+  opacity: 1;
+  background-color: #4A2B2D;
+  color: #FFFFFF;
+  border-color: transparent;
+}
+.valid-btn:hover {
+  transition: all 0.8s;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.required:after {
+  content: " *";
+  color: red;
+  font-weight: 400;
+  font-size: 16px;
+  vertical-align: top;
+  padding-top: 5px;
 }/*# sourceMappingURL=create_recipe.css.map */
