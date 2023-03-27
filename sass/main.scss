@@ -18,6 +18,11 @@ body::-webkit-scrollbar {
     display: none;
 
 }
+#full-recipe-link{
+    all:unset;
+    height:100%;
+    width:100%;
+}
 
 .main-background {
     background-position: 100% 100%;
@@ -56,6 +61,7 @@ body::-webkit-scrollbar {
     gap: 20px;
     width: 100%;
     margin-bottom: 60px;
+    display: none;
 }
 
 .arrow-numeration {
@@ -92,21 +98,44 @@ body::-webkit-scrollbar {
     border: 2px solid $color1;
     box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.3);
     z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.5s;
+
 
 }
 
+.show-filter-box {
+    opacity: 1;
+    pointer-events: all;
+}
+
 #select-filter-area {
-    margin: 10px 30px 20px;
+    margin: 10px 30px 0px;
     font-size: 16px;
     transition: all 0.7s;
+    transform: none;
 
+}
+
+.area-selector {
+    display: none;
+    pointer-events: none;
+    margin-bottom: 0;
+}
+
+.show-area-selection {
+    transition: all 0.5s;
+    display: initial;
+    pointer-events: all;
 }
 
 .search-option-block {
     z-index: 5;
-   
+    opacity: 0;
+    pointer-events: none;
     display: flex;
-    margin:5px 5px;
+    margin: 5px 5px;
     flex-direction: column;
     width: 250px;
     background-color: $color5;
@@ -114,7 +143,18 @@ body::-webkit-scrollbar {
     box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.3);
     position: absolute;
     transition: all 0.7s;
+    height:250px;
+    overflow-y: scroll;
 
+}
+
+.search-option-block::-webkit-scrollbar{
+    display: none;;
+}
+
+.show-search-options{
+    opacity: 1;
+    pointer-events: all;
 }
 
 .option-img {
@@ -132,7 +172,8 @@ body::-webkit-scrollbar {
     display: flex;
     padding: 10px 10px;
     gap: 5px;
-    border-radius: 5px;;
+    border-radius: 5px;
+   
     transition: all 0.7s;
 
     &:hover {
@@ -145,22 +186,38 @@ body::-webkit-scrollbar {
 
 }
 
-.filter-btn-block{
-   @include center;
-   gap:30px;
-   margin:-5px 0 10px;
+
+.filter-btn-block {
+    @include center;
+    gap: 30px;
+    margin: 10px 0 10px;
 
 }
 
-.filter-btn{
+.filter-btn {
     border-radius: 5px;
-    border:none;
+    border: none;
     background-color: $color4;
-    color:$color5;
+    color: $color5;
     @include font;
-    font-size:15px;
-    padding:4px 15px;
+    font-size: 15px;
+    padding: 4px 15px;
     cursor: pointer;
     transition: all 0.7s;
     @include transition(0.7s, 1.09);
+}
+
+.main-meals-block {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px - 58px - 38px);
+}
+
+.meals-block-no-results{
+    @include font;
+    font-size:50px;
+    color:$color1;
+    font-weight:600px;
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+    
 }

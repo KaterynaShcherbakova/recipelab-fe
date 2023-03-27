@@ -122,11 +122,12 @@ body {
 .meal-gnr-ideas-title {
     @include font;
     font-size: 60px;
-    font-weight: 700;
-    margin: -100px auto -25px;
+    font-weight: 600;
+    margin: -140px auto -25px;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
     color: $color1;
     user-select: none;
+    opacity:0.5;
 
 
     .cooking-lab-ideas{
@@ -144,4 +145,58 @@ body {
         margin: -100px auto -25px;
 
     }
+}
+
+#meal-gnr-ingr-title{
+  align-self: flex-end;
+  @include font;
+  font-size: 32px;
+  color: $color1;
+}
+
+
+#meal-gnr-recipe-title{
+    display: none;
+    @include font;
+    font-size: 70px;
+    color:$color1;
+    font-weight: 600;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+    margin:-100px 250px -50px;
+    
+    @media screen and (min-width:0px) and (max-width:1300px) {
+        margin: 50px auto -25px;
+        font-size:40px;
+
+
+    }
+
+   
+}
+
+#meal-gnr-recipes{
+    display: none;
+   
+
+}
+
+#recipe-loader{
+    margin-bottom:150px;
+    @media screen and (min-width:0px) and (max-width:321px) {
+       margin:0 auto 40px;
+
+    }
+}
+
+#meal-gnr-ingr-block{
+    @media screen and (min-width:0px) and (max-width:321px) {
+        max-width: 310px;;
+
+    }
+}
+
+#meal-gnr-detailed-recipe{
+    max-width:250px;
+    height:40px;
+    margin: 10px auto;
 }

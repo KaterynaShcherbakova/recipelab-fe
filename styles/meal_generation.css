@@ -122,13 +122,14 @@ body {
 .meal-gnr-ideas-title {
   font-family: "Montserrat Alternates";
   font-size: 60px;
-  font-weight: 700;
-  margin: -100px auto -25px;
+  font-weight: 600;
+  margin: -140px auto -25px;
   text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
   color: #130D1C;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  opacity: 0.5;
 }
 .meal-gnr-ideas-title .cooking-lab-ideas {
   margin-top: 50px;
@@ -143,4 +144,52 @@ body {
   .meal-gnr-ideas-title {
     margin: -100px auto -25px;
   }
+}
+
+#meal-gnr-ingr-title {
+  align-self: flex-end;
+  font-family: "Montserrat Alternates";
+  font-size: 32px;
+  color: #130D1C;
+}
+
+#meal-gnr-recipe-title {
+  display: none;
+  font-family: "Montserrat Alternates";
+  font-size: 70px;
+  color: #130D1C;
+  font-weight: 600;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+  margin: -100px 250px -50px;
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+  #meal-gnr-recipe-title {
+    margin: 50px auto -25px;
+    font-size: 40px;
+  }
+}
+
+#meal-gnr-recipes {
+  display: none;
+}
+
+#recipe-loader {
+  margin-bottom: 150px;
+}
+@media screen and (min-width: 0px) and (max-width: 321px) {
+  #recipe-loader {
+    margin: 0 auto 40px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 321px) {
+  #meal-gnr-ingr-block {
+    max-width: 310px;
+  }
+}
+
+#meal-gnr-detailed-recipe {
+  max-width: 250px;
+  height: 40px;
+  margin: 10px auto;
 }/*# sourceMappingURL=meal_generation.css.map */

@@ -1,6 +1,15 @@
 @import "colors";
 @import "mixin";
 
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 .burger-menu-block {
     display: flex;
     flex-direction: column;
@@ -16,7 +25,7 @@
     right: 0;
     opacity: 0;
     pointer-events: none;
-    top:38px;
+    top: 38px;
     transition: all 0.7s;
 
 }
@@ -58,15 +67,16 @@
 .burger-menu-label {
     margin: 0 17px 0 auto;
     position: relative;
-    
+
 
 }
 
 .burger-checkbox {
     display: none;
+
     &:checked {
-        ~.burger-menu-block{
-            opacity:1;
+        ~.burger-menu-block {
+            opacity: 1;
             pointer-events: all;
         }
     }
