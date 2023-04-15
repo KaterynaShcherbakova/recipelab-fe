@@ -1,0 +1,23 @@
+
+@use "colors" as *;
+@use "mixin" as * ;
+.main-footer {
+    @include center;
+    flex-direction: column;
+    background-color: $color4;
+    color: $color5;
+    height: 50px;
+    bottom: 0;
+    position: relative;
+
+}
+
+.main-footer-text {
+    @include font;
+
+}
+
+.main-footer-rights {
+    @include font;
+    color: $color5;
+}

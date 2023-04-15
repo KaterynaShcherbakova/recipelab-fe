@@ -1,0 +1,76 @@
+@use "colors" as *;
+@use "mixin" as *;
+:host{
+    display:flex;
+    flex-grow: 1;
+    
+}
+
+#cooking-lab {
+    margin-top: 40px;
+    @include center;
+    flex-direction: row;
+    gap: 80px;
+
+}
+
+#create-recipe {
+    gap: 60px;
+
+}
+
+#full-recipe-page{
+    width:100%;
+    @include center;
+}
+
+#recipe-instruct-block {
+    margin-top: -50px;
+    max-width: 1100px;
+    // display:flex;
+    // justify-content: center;
+}
+
+
+#meal-gnr-recipe-block{
+    @include center;
+}
+.main-meals-block {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px - 58px - 38px);
+}
+
+.meals-block-no-results{
+    @include font;
+    font-size:50px;
+    color:$color1;
+    font-weight:600px;
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+    
+}
+
+.recipes-block {
+
+    @include center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: auto;
+    margin-top: 70px;
+    gap: 30px;
+    margin-bottom: 80px;
+    @media screen and (min-width:0) and (max-width:620px) {
+        max-width: 310px;
+    }
+
+    @media screen and (min-width:621) and (max-width:1300px) {
+        max-width: 620px;
+
+    }
+
+    @media (min-width:1301px) {
+        max-width: 1300px;
+
+    }
+
+}

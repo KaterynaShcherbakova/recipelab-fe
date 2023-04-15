@@ -1,0 +1,42 @@
+<div class="cooking-lab-upper-block">
+
+    <div class="meal-gnr-question" id="cooking-lab-title-block">
+
+        <img src="img/medical-lab.png" alt="" class="cooking-lab-icon">
+        <p class="cooking-lab-title">Cooking Lab</p>
+
+    </div>
+</div>
+
+<app-main-block idStyle="cooking-lab">
+
+    <div class="ingr-block">
+        <app-input-ingr *ngFor="let i of inputIngrArray" [title]="i"></app-input-ingr>
+
+
+    </div>
+    <div class="adding-ingr-block">
+        <p class="info-lab-text">Input 7 or less ingredients that you have and we'll find perfect recipe for you:
+        </p>
+
+        <div class="search-div search-ingr">
+
+            <div class="textbox">
+                <input placeholder="Chicken breast" type="text" class="search-input" id='find-ingr'>
+                <div class="border"></div>
+            </div>
+            <img src="img/plus.png" alt="" class="search-icon plus-ingr">
+
+        </div>
+
+        <button class="find-recipe-btn">Search</button>
+        <p class="info-lab-text lower-text">You can add 3 more ingredients
+        </p>
+    </div>
+
+
+</app-main-block>
+<app-main-block>
+    <p class="cooking-lab-ideas-title" id="cooking-lab-ideas-title">Best options for you:</p>
+
+</app-main-block>

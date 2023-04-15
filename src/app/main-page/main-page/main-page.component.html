@@ -1,0 +1,26 @@
+<app-filter-header></app-filter-header>
+<div class="main-meals-block">
+
+    <app-main-block [ngStyle]="showLoader ? {display:'none'} : {}">
+        <app-meal *ngFor="let i of recipesList | async" [id]="i['idMeal']" [title]="i['strMeal']"
+            [img]="i['strMealThumb']" [category]="i['strCategory']" [area]="i['strArea']"
+            [link]="i['strYoutube']"></app-meal>
+
+        <div [ngStyle]="showPageNum ? {}:{display:'none'} " class="main-page-numeration">
+            <img src="img/previous.png" alt="" class="arrow-numeration" (click)="state.previousPage()">
+            <p class="main-page-num">{{state.mealsPage}}</p>
+            <img src="img/next.png" alt="" class="arrow-numeration" (click)="state.nextPage()">
+
+        </div>
+
+        <app-error-message [type]="errorType"></app-error-message>
+
+    </app-main-block>
+
+    <app-main-block *ngIf="showLoader">
+        <app-loader></app-loader>
+    </app-main-block>
+
+
+
+</div>

@@ -1,0 +1,36 @@
+@import "colors";
+@import "mixin";
+
+$time: 0.7s;
+
+:host {
+    margin-top: auto;
+
+}
+
+a {
+    all: unset;
+}
+
+.meal-recipe-button {
+    @include font;
+    @include center;
+    border: none;
+    font-size: 26px;
+    padding: 0px 20px;
+    height: 40px;
+    background-color: $color1;
+    color: $color5;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 1px solid $color5;
+    transition: all $time, background-color $time ease-out;
+
+    &:hover {
+
+        border: none;
+        background-color: $color4;
+    }
+
+}

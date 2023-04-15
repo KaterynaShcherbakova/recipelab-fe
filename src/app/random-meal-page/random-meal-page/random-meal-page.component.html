@@ -1,0 +1,8 @@
+<app-meal-gnr-block (handleClick)="generateBtnOnClick()"></app-meal-gnr-block>
+<app-meal-short-info [ngStyle]="showLoader ? {display:'none'} : {}" [type]="'randomMealDetails'"
+    idTitle="meal-gnr-title" [id]="id" [category]="category" [title]="title" [area]="area" [img]="img"
+    [ingrList]="ingrList"></app-meal-short-info>
+
+<app-main-block *ngIf="showLoader">
+    <app-loader></app-loader>
+</app-main-block>

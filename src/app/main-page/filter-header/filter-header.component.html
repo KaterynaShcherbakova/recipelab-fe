@@ -1,0 +1,53 @@
+<div class="additional-header-block">
+    <div class="filter-overdiv">
+        <img src="img/filter.png" alt="" class="filter-icon" (click)="cancelFilterOnClick()">
+        <div [@openClose]="isFilterBlock=='open' ? 'open' : 'closed'" class="filter-block">
+            <div className='checkbox-wrapper-48'>
+                <label class="checkbox-label">
+                    <input #latestcheckbox id="latest-checkbox" type="checkbox" class="checkbox-wrapper-input"
+                        [checked]="isLatestChecked" (change)="latestInputOnChange(latestcheckbox.checked)" />
+                    <p class="checkbox-text">Latest</p>
+                </label>
+
+            </div>
+
+            <div className='checkbox-wrapper-48'>
+                <label class="checkbox-label">
+                    <input #areacheckbox id="area-checkbox" type="checkbox" class="checkbox-wrapper-input"
+                        [checked]="isAreaChecked" (change)="areaInputOnChange(areacheckbox.checked)" />
+                    <p class="checkbox-text">By area</p>
+
+                </label>
+                <select #areaselector [@showHide]="isAreaInput=='show' ? 'show' : 'hide'"
+                    class="recipe-form-input area-selector" (change)="setDisabledApply()" id="select-filter-area"
+                    defaultValue="">
+                    <option selected hidden disabled value="">Select</option>
+                    <option *ngFor="let i of areasList" [value]="i['strArea']">{{i['strArea']}}</option>
+                </select>
+                <div class="filter-btn-block">
+                    <button class="filter-btn" id="cancel-btn" (click)="cancelFilterOnClick()">Cancel</button>
+                    <button class="filter-btn" id="apply-btn" [disabled]="disabledApply"
+                        (click)="applyFilterOnClick()">Apply</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="search-div">
+
+        <div class="search-full-block">
+            <div class="textbox">
+                <input #recipeSearch placeholder="Search" type="text" class="search-input" (blur)="searchInputOnBlur()" (keyup.enter)="searchBtnOnClick()" (input)="searchOnChange()">
+                <div class="border"></div>
+            </div>
+            <div *ngIf="isSearchBlock" class="search-option-block" >
+                <app-search-option *ngFor="let i of optionList" [id]="i['idMeal']" [title]="i['strMeal']" [img]="i['strMealThumb']"></app-search-option>
+            </div>
+        </div>
+        <img src="img/search.png" alt="" id="search-icon" class="search-icon"  (click)="searchBtnOnClick()">
+    
+    
+    </div>
+</div>

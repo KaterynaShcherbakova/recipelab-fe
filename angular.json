@@ -27,12 +27,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/img"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/smtp.js"
+            ]
           },
           "configurations": {
             "production": {

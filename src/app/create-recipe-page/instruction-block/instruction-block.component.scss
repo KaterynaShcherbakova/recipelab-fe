@@ -1,0 +1,38 @@
+
+@use "colors" as *;
+@use "mixin" as * ;
+
+.create-recipe-info-block {
+    display: flex;
+    width: min(95vw, 480px);
+    flex-direction: column;
+}
+
+.recipe-instruct-block {
+    color: $color5;
+    height: 300px;
+    background-color: rgba(74, 43, 45, 1);
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width:0) and (max-width:600px) {
+        height: 380px;
+    }
+
+}
+
+.create-recipe-title {
+    @include font;
+    margin-bottom: 30px;
+    color: $color1;
+    font-size: 60px;
+    font-weight: 700;
+    width: min(95vw, 450px);
+
+
+}
+.instruct-sentence {
+    @include font;
+    font-size: 22px;
+    margin: 20px 10px;
+}

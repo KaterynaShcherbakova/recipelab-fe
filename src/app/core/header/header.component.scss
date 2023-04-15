@@ -1,0 +1,108 @@
+@use "colors" as *;
+@use "mixin" as * ;
+
+$time: 0.6s;
+
+body,
+*,
+div,
+p {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-header-block {
+    @include center;
+    width: 100%;
+    top: 0;
+    background-color: $color1;
+    height: 58px;
+    left: 0;
+}
+
+.lower-header-block {
+    display:flex;
+    justify-content: space-between;
+    z-index: 10;
+    @include vertical-center;
+    min-width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: $color4;
+    height: 38px;
+    left: 0;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.main-header-logo {
+    height: 46px;
+    margin-left: 10px;
+}
+
+
+
+
+.lower-header-scrollbar-block {
+    @include vertical-center;
+    height: 38px;
+    gap: 35px;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    @media screen and (min-width:0) and (max-width:319px) {
+        display: none;
+
+    }
+
+    @media (min-width:320px) {
+        width: 80%;
+        overflow-x: scroll;
+        padding-left: 10px;
+    }
+
+
+}
+
+.lower-header-scrollbar-text {
+    transition: transform $time;
+    color: $color5;
+    font-size: 20px;
+    @include font;
+    @include transition($time, 1.07);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        width: 0;
+        background: $color5;
+        height: 1.5px;
+        transition: all 0.5s ease-in-out;
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        border-radius:5px;
+    }
+
+    &.chosen-category:after {
+        width: 100%;
+        left: 0;
+        border-radius:5px;
+
+    }
+
+    &.chosen-category:hover:after {
+        width: 100%;
+        left: 0;
+        border-radius:5px;
+
+    }
+}
+

@@ -1,0 +1,49 @@
+<div class="create-recipe-form-block">
+    <form class="recipe-instruct-form" (input)="handleFormChange()" (submit)="handleFormSubmit($event)">
+        <label>
+            <p class="recipe-form-label required">Meal's title</p>
+            <input #titleInput id='title' class="recipe-form-input" type="text" placeholder="Caesar salad"
+                (input)="handleTitle()">
+        </label>
+        <label>
+            <p class="recipe-form-label required">Category</p>
+            <select #categoryInput id='category' class="recipe-form-input" defaultValue="" (input)="handleCategory()">
+
+                <option selected hidden disabled value="">Select</option>
+                <option value="pasta">Pasta</option>
+                <option value="seafood">Seafood</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="dessert">Dessert</option>
+                <option value="side">Side</option>
+                <option value="starter">Starter</option>
+                <option value="other">Other</option>
+
+            </select>
+        </label>
+        <label>
+            <p class="recipe-form-label required">Recipe file</p>
+            <input #recipeInput id='recipe' class="custom-file-input" type="file" accept=".txt, .docx, .doc, .pdf"
+                (input)="handleRecipe()">
+        </label>
+        <label>
+            <p class="recipe-form-label required">Final photo</p>
+            <input #photoInput id='photo' class="custom-file-input" type="file" accept="image/*"
+                (input)="handlePhoto()">
+        </label>
+        <label>
+            <p class="recipe-form-label">Link on Youtube:</p>
+            <input #linkInput id='link' class="recipe-form-input" type="url" placeholder="https://example.com"
+                pattern="https://.*">
+        </label>
+        <div class="create-recipe-btn-block">
+            <button class="create-recipe-button valid-btn" id="cancel-button" (click)="cancelOnClick()">Cancel</button>
+            <button [ngClass]="disabledSend ? '': 'valid-btn'" [disabled]="disabledSend" class="create-recipe-button"
+                id="send-button" type="submit" >Send</button>
+
+        </div>
+    </form>
+    <img class="create-recipe-bg-icon" src="img/meal.png" />
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
