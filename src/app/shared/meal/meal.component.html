@@ -1,0 +1,24 @@
+<div class="recipe-box">
+    <img [src]="img" alt="" class="food-img-small">
+
+    <div class="meal-title">{{title}}</div>
+    <div class="meal-info">
+        <div class="meal-area ">
+            <div class="meal-area-text">
+                {{area}}
+            </div>
+        </div>
+        <div class="meal-area">
+            <div class="meal-area-text">
+                {{category}}
+            </div>
+        </div>
+
+    </div>
+
+  <app-detailed-recipe-btn [id]="id"></app-detailed-recipe-btn>
+
+    <a [href]="link" class="meal-recipe-link">
+        Watch on Youtube
+    </a>
+</div>

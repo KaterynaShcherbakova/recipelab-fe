@@ -1,0 +1,18 @@
+@import "colors";
+@import "mixin";
+ $time: 0.6s;
+body, * {
+    margin: 0;
+    padding: 0;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+body{
+    min-height: 100vh;
+}

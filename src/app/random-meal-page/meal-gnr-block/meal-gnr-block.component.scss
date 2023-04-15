@@ -1,0 +1,117 @@
+@import 'colors';
+@import 'mixin';
+
+
+
+.meal-gnr-text-block {
+    max-width: 100vw;
+
+}
+
+.meal-gnr-question {
+    @include font;
+    font-size: 75px;
+    font-weight: 700;
+    color: $color1;
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        margin: 35px auto;
+        font-size: 55px;
+    }
+
+    @media screen and (min-width:621px) and (max-width:1300px) {
+        width: 600px;
+        margin: 35px auto;
+    }
+
+    @media (min-width:1301px) {
+        margin: 35px 50px;
+    }
+
+}
+
+.meal-gnr-additional {
+    @include font;
+    font-size: 25px;
+    color: $color4;
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        width: 320px;
+        margin: 35px auto;
+    }
+
+    @media screen and (min-width:621px) and (max-width:1300px) {
+        width: 620px;
+        margin: -30px auto;
+    }
+
+    @media (min-width:1301px) {
+        margin: -40px 240px;
+    }
+}
+
+.meal-gnr-upper-block {
+    display: flex;
+    user-select: none;
+
+    @media screen and (min-width:0) and (max-width:800px) {
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
+.meal-gnr-arrow {
+
+    @media screen and (min-width:0) and (max-width:1300px) {
+        display: none;
+    }
+
+    @media (min-width:1301px) {
+        opacity: 0.1;
+        height: 100px;
+        align-self: flex-end;
+        top: -120%;
+        left: 0%;
+        position: absolute;
+    }
+
+}
+
+.meal-gnr-btn {
+    background-color: $color4;
+    color: $color5;
+    @include font;
+    font-size: 35px;
+    height: 90px;
+    margin: 180px -120px;
+    padding: 20px 30px;
+    position: relative;
+
+    border-radius: 7px;
+    border: none;
+    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+
+
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        margin: 50px auto 120px;
+        width: 300px;
+        font-size: 29px;
+    }
+
+    @media screen and (min-width:621px) and (max-width:1300px) {
+        margin: 100px auto 120px;
+        padding: 10px 25px;
+        font-size: 29px;
+
+    }
+
+    @media (min-width:1301px) {
+        padding: 20px 30px;
+
+    }
+
+}

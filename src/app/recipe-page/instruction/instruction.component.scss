@@ -1,0 +1,83 @@
+
+@import "colors";
+@import "mixin";
+
+:host{
+    display: flex;
+    justify-content: center;
+}
+#recipe-instruct-block {
+    margin-top: -100px;
+    max-width: 1100px;
+    display: flex;
+}
+
+.recipe-instruct-title {
+    @include font;
+    font-weight: 700;
+    font-size: 40px;
+    color: $color2;
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+.recipe-instruction {
+    @include font;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.br-recipe-step {
+    font-weight: 700;
+    
+}
+
+a {
+    color: $color1;
+}
+
+.recipe-link {
+    font-size: 27px;
+    font-weight: 700;
+    color: $color2;
+
+}
+
+.recipe-video {
+    align-self: center;
+    width: 700px;
+    height: 450px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width:0) and (max-width:500px) {
+        height: 200px;
+        width: 300px;
+    }
+
+    @media screen and (min-width:501px) and (max-width:750px) {
+        height: 300px;
+        width: 450px;
+    }
+}
+
+#recipe-area,
+#recipe-category {
+    background-color: $color2;
+    padding: 5px 30px;
+    margin-bottom: 10px;
+
+}
+
+#recipe-area-text,
+#recipe-category-text {
+    color: $color5;
+}
+
+#full-recipe-ingr-block {
+    height: unset;
+}
+
+

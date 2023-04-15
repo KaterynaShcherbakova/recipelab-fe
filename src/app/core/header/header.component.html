@@ -1,0 +1,15 @@
+<div class="main-header-block">
+    <a href="index.html">
+        <img class="main-header-logo" src="img/white_logo.png" />
+    </a>
+</div>
+<div class="lower-header-block">
+    <div class="lower-header-scrollbar-block" id="category-list">
+        <ng-template [ngIf]="router.url==='/'">
+            <div *ngFor="let i of categoryList" (click)="setCurrCategory(i)" class="lower-header-scrollbar-text"
+                [ngClass]="(currCategory==i && state.lastRequest=='category') ? 'chosen-category' : ''">{{i}}</div>
+        </ng-template>
+    </div>
+
+    <app-burger-menu></app-burger-menu>
+</div>

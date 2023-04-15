@@ -1,0 +1,14 @@
+<div class="main-meals-block" id="full-recipe-page">
+    <ng-template [ngIf]="!showLoader && !connectionError">
+        <app-meal-short-info idTitle="recipe-main-title" [ingrList]='ingredientsList' [title]="recipeTitle" [img]="img" [category]="recipeCategory"
+            [area]="recipeArea"></app-meal-short-info>
+        <app-instruction [video]="video" [link]="link" [instruct]="instruct"></app-instruction>
+
+    </ng-template>
+    <app-main-block *ngIf="connectionError" >
+        <app-error-message [type]="'noConnection'"></app-error-message>
+    </app-main-block>
+    <app-main-block *ngIf="showLoader">
+        <app-loader></app-loader>
+    </app-main-block>
+</div>

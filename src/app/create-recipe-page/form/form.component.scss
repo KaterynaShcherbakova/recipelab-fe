@@ -1,0 +1,194 @@
+@use "colors" as *;
+@use "mixin" as * ;
+
+$time:0.7s;
+.recipe-instruct-form {
+    height: 550px;
+    background-color: $color5;
+    width: min(95vw, 450px);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $color2;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.create-recipe-form-block {
+    display: flex;
+
+}
+
+
+.create-recipe-bg-icon {
+    @media screen and (min-width:0) and (max-width:1300px) {
+        display: none;
+    }
+
+    @media (min-width:1301px) {
+
+        opacity: 0.15;
+        height: 460px;
+        z-index: -1;
+        margin: 50px 220px;
+        position: absolute;
+    }
+
+
+}
+
+.instruct-sentence {
+    @include font;
+    font-size: 22px;
+    margin: 20px 10px;
+}
+
+.recipe-form-label {
+    @include font;
+    font-size: 25px;
+    margin: 15px 25px 6px;
+    font-weight: 700;
+
+}
+
+.recipe-form-input {
+    @include font;
+    font-size: 20px;
+    height: 34px;
+    border: 2px solid $color2;
+    border-radius: 5px;
+    margin: 0 45px;
+    padding-left: 5px;
+    transition: transform $time;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:focus {
+        transform: scale(1.05);
+        transition: transform $time;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        max-width: 210px;
+    }
+
+
+}
+
+select {
+    width: 200px;
+}
+
+option {
+    font-size: 18px;
+}
+
+option[disabled][value=""] {
+    opacity: 0.1;
+}
+
+input[type=file] {
+
+    margin: 0 45px;
+    height: 30px;
+    width: 300px;
+    max-width: 100%;
+    padding: 5px;
+    background: $color5;
+    border-radius: 5px;
+    border: 2px solid $color1;
+    vertical-align: middle;
+
+    @include font;
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        max-width: 200px;
+    }
+
+
+
+    &::file-selector-button {
+
+        font-weight: 700;
+
+        border-color: transparent;
+        border-width: 2px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 14px;
+        margin-right: 20px;
+        background: $color2;
+        padding: 0 15px;
+        border-radius: 5px;
+        color: $color5;
+        cursor: pointer;
+        transition: all .6s ease-in-out;
+    }
+
+    &::file-selector-button:hover {
+
+        background: $color5;
+        color: $color2;
+        border: 2px solid $color2;
+
+
+    }
+}
+
+.create-recipe-btn-block {
+    margin: 35px auto;
+    display: flex;
+    gap: 35px;
+
+
+}
+
+.create-recipe-button {
+    all: unset;
+    height: 32px;
+    width: 140px;
+    border-radius: 5px;
+    @include font;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: $color5;
+    font-weight: 700;
+    color: $color2;
+    border: 2px solid $color2;
+    @include center;
+    transition: all $time;
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        max-width: 100px;
+    }
+
+    opacity:0.5;
+
+
+}
+
+.valid-btn {
+    opacity: 1;
+
+    background-color: $color2;
+    color: $color5;
+    border-color: transparent;
+    @include transition($time, 1.08);
+
+}
+
+.required:after {
+    content: " *";
+    color: red;
+    font-weight: 400;
+    font-size:16px;
+    vertical-align: top;
+    padding-top:5px;
+}

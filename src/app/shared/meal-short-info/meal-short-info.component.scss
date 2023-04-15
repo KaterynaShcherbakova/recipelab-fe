@@ -1,0 +1,256 @@
+@import "colors";
+@import "mixin";
+
+.meal-short-info{
+    display: flex;
+    flex-direction: column;
+}
+#full-recipe-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 96px);
+
+}
+
+.recipe-page-loader {
+    flex-grow: 1;
+    @include center;
+}
+
+#recipe-main-title {
+    display: flex;
+    align-items: center;
+    font-size: 43px;
+    text-shadow: none;
+    margin-bottom: -30px;
+    color: $color2;
+
+}
+
+#meal-gnr-title {
+   margin:auto;
+    margin-top:-120px;
+   
+}
+
+#recipe-page {
+    display: none;
+    gap: 60px;
+}
+
+.recipe-img {
+    order: -2;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width:0) and (max-width:620px) {
+        height: 300px;
+        width: 300px;
+    }
+
+
+}
+
+.recipe-subtitle {
+    align-self: flex-end;
+    font-weight: 700;
+    color: $color2;
+}
+
+.subtitle-small-line {
+    width: 300px;
+    background-color: $color2;
+    height: 1px;
+    align-self: flex-end;
+}
+
+.ingredients-block {
+    // height:350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+    margin-left: auto;
+    width: 95%;
+
+}
+
+.subtitle-long-line {
+    width: 95%;
+    background-color: $color2;
+    height: 1px;
+    align-self: flex-end;
+
+}
+
+.ingr-item {
+    @include font;
+    align-self: flex-end;
+    color: $color1;
+    font-size: 18px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+
+    .ingr-title {
+        font-size: 23px;
+
+    }
+
+    .ingr-measure {
+        align-self: flex-end;
+    }
+}
+
+#recipe-instruct-block {
+    margin-top: -50px;
+    max-width: 1100px;
+    display: none;
+}
+
+.recipe-instruct-title {
+    @include font;
+    font-weight: 700;
+    font-size: 40px;
+    color: $color2;
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+.recipe-instruction {
+    @include font;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.br-recipe-step {
+    font-weight: 700;
+    ;
+}
+
+a {
+    color: $color1;
+}
+
+.recipe-link {
+    font-size: 27px;
+    font-weight: 700;
+    color: $color2;
+
+}
+
+.recipe-video {
+    align-self: center;
+    width: 700px;
+    height: 450px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width:0) and (max-width:500px) {
+        height: 200px;
+        width: 300px;
+    }
+
+    @media screen and (min-width:501px) and (max-width:750px) {
+        height: 300px;
+        width: 450px;
+    }
+}
+
+#recipe-area,
+#recipe-category {
+    background-color: $color2;
+    padding: 5px 30px;
+    margin-bottom: 10px;
+
+}
+
+#recipe-area-text,
+#recipe-category-text {
+    color: $color5;
+}
+
+#full-recipe-ingr-block {
+    height: unset;
+}
+
+
+.recipe-title-text {
+    font-size: 56px;
+}
+
+.adding-ingr-block {
+    width: 660px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    .lower-text {
+        margin-top: auto;
+        font-size: 20px;
+        color: $color4;
+        align-self: flex-end;
+
+        @media screen and (min-width:0) and (max-width:620px) {
+            font-size: 16px;
+            ;
+
+        }
+
+    }
+
+    @media screen and (min-width:0) and (max-width:1200px) {
+        order: -1;
+
+    }
+
+    @media (min-width:1201px) {
+        order: 1;
+
+    }
+
+}
+
+.meal-info {
+    display: flex;
+    margin-left: 30px;
+    gap: 13px;
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+.meal-area {
+    text-align: center;
+    @include center;
+    height: 24px;
+    padding: 0 5px;
+    background-color: $color3;
+    border-radius: 4px;
+}
+
+.meal-area-text {
+    @include font;
+    color: $color1;
+    font-size: 18px;
+
+}
+
+
+.info-lab-text {
+    @include font;
+    align-self: flex-start;
+    font-size: 32px;
+    color: $color1;
+
+
+}
+
+.recipe-subtitle {
+    align-self: flex-end;
+    font-weight: 700;
+    color: $color2;
+}
