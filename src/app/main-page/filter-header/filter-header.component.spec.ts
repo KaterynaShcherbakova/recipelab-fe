@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilterHeaderComponent } from './filter-header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('FilterHeaderComponent', () => {
   let component: FilterHeaderComponent;
@@ -8,6 +9,7 @@ describe('FilterHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[BrowserAnimationsModule],
       declarations: [ FilterHeaderComponent ]
     })
     .compileComponents();

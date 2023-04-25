@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RandomMealPageComponent } from './random-meal-page.component';
+import { RandomMealPageModule } from '../random-meal-page.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('RandomMealPageComponent', () => {
   let component: RandomMealPageComponent;
@@ -8,6 +10,7 @@ describe('RandomMealPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[RandomMealPageModule, RouterTestingModule],
       declarations: [ RandomMealPageComponent ]
     })
     .compileComponents();

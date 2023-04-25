@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MealShortInfoComponent } from './meal-short-info.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 describe('MealShortInfoComponent', () => {
   let component: MealShortInfoComponent;
@@ -8,6 +9,7 @@ describe('MealShortInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[CoreModule],
       declarations: [ MealShortInfoComponent ]
     })
     .compileComponents();

@@ -7,7 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MainBlockComponent {
   @Input() idStyle = '';
-  ngOnInit() {
-    console.log(this.idStyle);
-  }
+ 
 }

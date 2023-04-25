@@ -43,7 +43,6 @@ export class FilterHeaderComponent {
   ngOnInit() {
 
     this.request.getAllAreas().then((data) => {
-      console.log(data);
       this.areasList = data.meals;
     })
   }
@@ -80,7 +79,6 @@ export class FilterHeaderComponent {
   setDisabledApply() {
     if ((this.isAreaChecked && !this.areaInput.nativeElement.value) || this.isLatestChecked) this.disabledApply = true;
     else this.disabledApply = false;
-    console.log(this.disabledApply);
   }
 
   latestInputOnChange(value: boolean): void {

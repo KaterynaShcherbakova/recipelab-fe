@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { MainPageComponent } from './main-page.component';
+import { MainPageModule } from '../main-page.module';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -8,7 +9,8 @@ describe('MainPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainPageComponent ]
+      imports:[MainPageModule, BrowserAnimationsModule],
+      declarations: [ MainPageComponent]
     })
     .compileComponents();
 

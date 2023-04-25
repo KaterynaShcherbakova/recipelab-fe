@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateRecipePageComponent } from './create-recipe-page.component';
+import { CoreModule } from 'src/app/core/core.module';
+import { CreateRecipePageModule } from '../create-recipe-page.module';
 
 describe('CreateRecipePageComponent', () => {
   let component: CreateRecipePageComponent;
@@ -8,6 +10,7 @@ describe('CreateRecipePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[CoreModule, CreateRecipePageModule],
       declarations: [ CreateRecipePageComponent ]
     })
     .compileComponents();

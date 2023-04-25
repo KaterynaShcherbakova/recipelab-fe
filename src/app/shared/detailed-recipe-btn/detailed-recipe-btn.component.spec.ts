@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailedRecipeBtnComponent } from './detailed-recipe-btn.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('DetailedRecipeBtnComponent', () => {
   let component: DetailedRecipeBtnComponent;
@@ -8,6 +9,7 @@ describe('DetailedRecipeBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[RouterTestingModule],
       declarations: [ DetailedRecipeBtnComponent ]
     })
     .compileComponents();

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipePageComponent } from './recipe-page.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RecipePageModule } from '../recipe-page.module';
 
 describe('RecipePageComponent', () => {
   let component: RecipePageComponent;
@@ -8,6 +10,7 @@ describe('RecipePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[RouterTestingModule, RecipePageModule],
       declarations: [ RecipePageComponent ]
     })
     .compileComponents();
