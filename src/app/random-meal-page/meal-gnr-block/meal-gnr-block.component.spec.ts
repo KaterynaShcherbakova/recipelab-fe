@@ -8,9 +8,9 @@ describe('MealGnrBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MealGnrBlockComponent ]
+      declarations: [MealGnrBlockComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MealGnrBlockComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,10 @@ describe('MealGnrBlockComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should emit on click', () => {
+    component.handleClick.subscribe(() => { expect().nothing() });
+    component.generateBtnOnClick();
   });
 });

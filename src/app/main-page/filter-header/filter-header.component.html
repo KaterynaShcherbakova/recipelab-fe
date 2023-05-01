@@ -39,7 +39,7 @@
 
         <div class="search-full-block">
             <div class="textbox">
-                <input #recipeSearch placeholder="Search" type="text" class="search-input" (blur)="searchInputOnBlur()" (keyup.enter)="searchBtnOnClick()" (input)="searchOnChange()">
+                <input id="searchInput" #recipeSearch placeholder="Search" type="text" class="search-input" (blur)="searchInputOnBlur()" (keyup.enter)="searchBtnOnClick()" (input)="searchOnChange()">
                 <div class="border"></div>
             </div>
             <div *ngIf="isSearchBlock" class="search-option-block" >

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RequestService } from '../../core/services/request.service';
 import { MainPageStateService } from 'src/app/core/services/main-page-state.service';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 
 export class MainPageComponent {
 
-  recipesList: Observable<any[]> = new Observable();
+  recipesList:BehaviorSubject<any[]> =new BehaviorSubject<any[]>([]);
   optionList = [];
   currCategory = 'Pasta';
   currArea = '';
@@ -26,7 +26,8 @@ export class MainPageComponent {
   }
 
   handleRecipes(e: any) {
-    this.recipesList = of(e.meals);
+    
+    this.recipesList.next(e.meals);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.state.moreElems = e.moreElems;
     this.showLoader = false;
@@ -49,7 +50,7 @@ export class MainPageComponent {
     this.state.errorType.subscribe((data) => {
       this.errorType = data;
       if (data) {
-        this.recipesList = of([]);
+        this.recipesList.next([]);
       }
 
     });
@@ -71,7 +72,7 @@ export class MainPageComponent {
       if (data !== '') {
         this.showLoader = true;
         this.request.getSearchResults(data, this.state.mealsPage, this.state.pageOffset).then((recipes) => {
-          this.recipesList = of(recipes.meals);
+          this.recipesList.next(recipes.meals);
 
           if (recipes.meals.length === 0) {
             this.showPageNum = false;

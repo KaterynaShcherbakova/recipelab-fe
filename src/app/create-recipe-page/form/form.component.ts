@@ -37,6 +37,7 @@ export class FormComponent {
 
 
   handleTitle() {
+
     if (!this.titleInput.nativeElement.value) this.titleErr = true;
     else if (!this.TITLE_REGEX.test(this.titleInput.nativeElement.value)) this.titleErr = true;
     else this.titleErr = false;

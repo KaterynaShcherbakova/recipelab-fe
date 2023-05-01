@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RequestService } from 'src/app/core/services/request.service';
 import { MealComponent } from './meal.component';
 import { SharedModule } from '../shared.module';
@@ -9,15 +9,16 @@ describe('MealComponent', () => {
   let fixture: ComponentFixture<MealComponent>;
   let debug: DebugElement;
   let RequestServiceStub: any;
-
+  const data = {
+    strArea: "Italian",
+    strCategory: "Pasta",
+    strYoutube: "https://www.youtube.com//watch?v=4aZr5hZXP_s",
+  }
   beforeEach(async () => {
+
     RequestServiceStub = {
       getMealById: (id: number | string) => {
-        const data = {
-          strArea: "Italian",
-          strCategory: "Pasta",
-          strYoutube: "https://www.youtube.com//watch?v=4aZr5hZXP_s",
-        }
+
         return new Promise((resolve, reject) => {
           resolve(data);
         })
@@ -41,4 +42,23 @@ describe('MealComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should set area if we do not have area', fakeAsync(() => {
+    component.link = "/myLink";
+    component.area = "";
+    fixture.detectChanges(); 
+    component.ngOnInit();
+    tick(200);
+    expect(component.area).toEqual(data.strArea);
+
+  }));
+  it('should set category if we do not have category', fakeAsync(() => {
+    component.link = "/myLink";
+    component.category = "";
+    fixture.detectChanges(); 
+    component.ngOnInit();
+    tick(200);
+    expect(component.category).toEqual(data.strCategory);
+
+  }));
 });

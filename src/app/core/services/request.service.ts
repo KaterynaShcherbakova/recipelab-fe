@@ -16,7 +16,7 @@ export class RequestService {
 
     constructor(private state : MainPageStateService) {}
     
-    private newRequest = async (endpoint: string) => {
+    public newRequest = async (endpoint: string) => {
         this.state.setErrorType('');
         return (await fetch(endpoint, { method: 'GET' }).catch(()=>{throw new Error('No connection')})).json();
     }

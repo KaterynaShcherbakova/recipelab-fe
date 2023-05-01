@@ -39,7 +39,7 @@ import { MainPageStateService } from 'src/app/core/services/main-page-state.serv
 export class FilterHeaderComponent {
 
   areasList = [];
-  optionList = [];
+  optionList:any[] = [];
   ngOnInit() {
 
     this.request.getAllAreas().then((data) => {
