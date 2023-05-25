@@ -110,7 +110,7 @@ describe('FilterHeaderComponent', () => {
 
 
 
-  it('should disabled apply when latest is chosen', () => {
+  it('should disable apply when latest is chosen', () => {
     component.disabledApply = false;
     component.isLatestChecked = true;
     fixture.detectChanges();
@@ -120,7 +120,7 @@ describe('FilterHeaderComponent', () => {
   })
 
 
-  it('should disabled apply when was not chosen area', () => {
+  it('should disable apply when was not chosen area', () => {
     component.disabledApply = false;
     component.isAreaChecked = true;
     component.areaInput.nativeElement.value = ""

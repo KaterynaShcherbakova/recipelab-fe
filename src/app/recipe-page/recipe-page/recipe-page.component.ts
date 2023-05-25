@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from 'src/app/core/services/request.service';
 @Component({
   selector: 'app-recipe-page',
   templateUrl: './recipe-page.component.html',
   styleUrls: ['./recipe-page.component.scss', '../../random-meal-page/meal-gnr-block/meal-gnr-block.component.scss',
-'../../main-page/main-page/main-page.component.scss']
+    '../../main-page/main-page/main-page.component.scss']
 })
 export class RecipePageComponent {
   constructor(public route: ActivatedRoute, public router: Router, public request: RequestService) { }
@@ -19,7 +19,9 @@ export class RecipePageComponent {
   ingredientsList: { ingr: string, measure: string }[] = [];
   showLoader: boolean = true;
   connectionError: boolean = false;
-
+  id: string = '';
+  @Input() title: string = '';
+  @Input() idTitle: string = '';
   ngOnInit() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.route.queryParams.subscribe((params) => {
@@ -37,7 +39,7 @@ export class RecipePageComponent {
     this.showLoader = true;
 
     this.request.getMealById(id).then((data) => {
-    
+      this.id = data.idMeal;
       this.showLoader = false;
       this.recipeTitle = data.strMeal;
       this.recipeArea = data.strArea;

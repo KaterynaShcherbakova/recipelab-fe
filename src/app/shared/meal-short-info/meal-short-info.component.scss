@@ -26,6 +26,7 @@
     margin-bottom: -30px;
     color: $color2;
 
+  
 }
 
 #meal-gnr-title {
@@ -177,6 +178,16 @@ a {
 
 #full-recipe-ingr-block {
     height: unset;
+
+    @media screen and (min-width:0) and (max-width:1090px) {
+        order: -1;
+
+    }
+
+    @media (min-width:1091px) {
+        order: 1;
+
+    }
 }
 
 

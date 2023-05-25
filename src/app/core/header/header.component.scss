@@ -12,13 +12,23 @@ p {
 
 }
 
+:host{
+    z-index:20;
+}
+
 .main-header-block {
     @include center;
+    position: relative;
     width: 100%;
     top: 0;
     background-color: $color1;
     height: 58px;
     left: 0;
+    z-index: 20;
+    *{
+        z-index: 20;
+
+    }
 }
 
 .lower-header-block {

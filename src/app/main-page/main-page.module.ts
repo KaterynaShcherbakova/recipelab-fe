@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { SearchOptionComponent } from './search-option/search-option.component';
 import { RecipePageModule } from '../recipe-page/recipe-page.module';
 import { RouterModule } from '@angular/router';
+import { RecommendMsgComponent } from './recommend-msg/recommend-msg.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
 
     MainPageComponent,
     FilterHeaderComponent,
-    SearchOptionComponent
+    SearchOptionComponent,
+    RecommendMsgComponent
 
   ],
   imports: [
