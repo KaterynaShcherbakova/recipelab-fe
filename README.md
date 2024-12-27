@@ -3,7 +3,9 @@ A responsive web application for managing and exploring recipes. Users can searc
 The project was initially developed using HTML, SCSS, and JavaScript and later rebuilt with Angular, WebSocket integration and Jasmine/Karma testing.
 
 ![Screenshot of Recipes](./resipes.jpg)
+
 ![Screenshot of Custom Recipe](./custom_recipe.jpg)
+
 ![Screenshot of Meal Generator](./random_meal.jpg)
 
 ## Project Features
