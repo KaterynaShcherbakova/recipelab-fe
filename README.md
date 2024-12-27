@@ -20,12 +20,12 @@ The project was initially developed using HTML, SCSS, and JavaScript and later r
 
 ### HTML + SCSS + JS
 
-Switch to branch `lab 2`.
+Switch to branch `lab 02`.
 Open `index.html` using Live Server.
 
 ### Angular 15
 
-Switch to branch `lab 6`
+Switch to branch `lab 06`
 
 #### Install dependencies
 
